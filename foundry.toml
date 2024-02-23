@@ -14,4 +14,4 @@ cbor_metadata = true
 extra_output = ["devdoc", "userdoc", "metadata", "storageLayout"]
 
 [rpc_endpoints]
-ethereum = "https://rpc.flashbots.net"
+ethereum = "https://rpc.ankr.com/eth"
