@@ -43,23 +43,6 @@ contract WxRINGTest is Test {
         assertEq(wxRING.totalSupply(), 1);
     }
 
-    function mint_ring_to(address account, uint256 amount) internal {
-        vm.prank(Ownable(RING).owner());
-        ERC20PresetMinterPauser(RING).mint(account, amount);
-    }
-
-    function deposit_for(address account, uint256 amount) internal {
-        vm.startPrank(account);
-        IERC20(RING).approve(address(wxRING), amount);
-        wxRING.depositFor(account, amount);
-        vm.stopPrank();
-    }
-
-    function withdraw_to(address account, uint256 amount) internal {
-        vm.prank(account);
-        wxRING.withdrawTo(account, amount);
-    }
-
     function test_withdraw_to() public {
         mint_ring_to(guy, 1);
         deposit_for(guy, 1);
@@ -83,6 +66,23 @@ contract WxRINGTest is Test {
         assertEq(wxRING.balanceOf(guy), 0);
         assertEq(wxRING.balanceOf(him), 1);
         assertEq(wxRING.totalSupply(), 1);
+    }
+
+    function mint_ring_to(address account, uint256 amount) internal {
+        vm.prank(Ownable(RING).owner());
+        ERC20PresetMinterPauser(RING).mint(account, amount);
+    }
+
+    function deposit_for(address account, uint256 amount) internal {
+        vm.startPrank(account);
+        IERC20(RING).approve(address(wxRING), amount);
+        wxRING.depositFor(account, amount);
+        vm.stopPrank();
+    }
+
+    function withdraw_to(address account, uint256 amount) internal {
+        vm.prank(account);
+        wxRING.withdrawTo(account, amount);
     }
 }
 
