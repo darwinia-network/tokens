@@ -60,7 +60,7 @@ contract WxRINGTest is Test {
 		assertEq(IERC20(RING).balanceOf(guy), 0);
 		withdraw_to(guy, 1);
 		assertEq(wxRING.balanceOf(guy), 0);
-		assertEq(IERC20(RING).balanceOf(guy), 0);
+		assertEq(IERC20(RING).balanceOf(guy), 1);
 	}
 }
 
