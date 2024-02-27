@@ -15,3 +15,6 @@ extra_output = ["devdoc", "userdoc", "metadata", "storageLayout"]
 
 [rpc_endpoints]
 ethereum = "https://rpc.ankr.com/eth"
+
+[fmt]
+line_length = 80
