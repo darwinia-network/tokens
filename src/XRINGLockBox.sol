@@ -28,11 +28,7 @@ contract XRINGLockBox {
         emit Withdrawal(msg.sender, amount);
     }
 
-    function totalSupplyOfXRING() public view returns (uint256) {
+    function totalSupply() public view returns (uint256) {
         return XRING.balanceOf(address(this));
-    }
-
-    function totalSupplyOfRING() public view returns (uint256) {
-        return RING.balanceOf(address(this));
     }
 }
