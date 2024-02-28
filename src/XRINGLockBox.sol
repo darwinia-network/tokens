@@ -17,15 +17,31 @@ contract XRINGLockBox {
     }
 
     function deposit(uint256 amount) external {
-        XRING.transferFrom(msg.sender, address(this), amount);
-        RING.mint(msg.sender, amount);
-        emit Deposit(msg.sender, amount);
+        _deposit(msg.sender, amount);
     }
 
     function withdraw(uint256 amount) external {
+        _withdraw(msg.sender, amount);
+    }
+
+    function depositFor(address to, uint256 amount) external {
+        _deposit(to, amount);
+    }
+
+    function withdrawTo(address to, uint256 amount) external {
+        _withdraw(to, amount);
+    }
+
+    function _deposit(address to, uint256 amount) internal {
+        XRING.transferFrom(msg.sender, address(this), amount);
+        RING.mint(to, amount);
+        emit Deposit(to, amount);
+    }
+
+    function _withdraw(address to, uint256 amount) internal {
         RING.burn(msg.sender, amount);
-        XRING.transfer(msg.sender, amount);
-        emit Withdrawal(msg.sender, amount);
+        XRING.transfer(to, amount);
+        emit Withdrawal(to, amount);
     }
 
     function totalSupply() public view returns (uint256) {
