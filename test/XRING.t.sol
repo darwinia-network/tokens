@@ -4,7 +4,8 @@ pragma solidity ^0.8.0;
 import "forge-std/Test.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {
-    ERC20PresetMinterPauser, IERC20
+    ERC20PresetMinterPauser,
+    IERC20
 } from "@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol";
 import {Chains} from "create3-deploy/script/Chains.sol";
 import {WxRING} from "../src/WxRING.sol";
