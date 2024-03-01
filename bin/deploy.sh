@@ -3,10 +3,9 @@
 set -eo pipefail
 
 c3=0x0000000000C76fe1798a428F60b27c6724e03408
-deployer=0x0f14341A7f464320319025540E8Fe48Ad0fe5aec
 
 ring=0x9469D013805bFfB7D3DEBe5E7839237e535ec483
-xring=0xBd1a110ec476b4775c43905000288881367B1a88
+xring=
 
 deploy() {
   local addr=${1:?}
@@ -18,11 +17,12 @@ deploy() {
     (set -x; seth send $c3 "deploy(bytes32,bytes)" $salt $bytecode)
   else
     echo "Unexpected address."
+    exit 1
   fi
 }
 
-addr=0x0000D8Ce7Be770AE9c3705872d28468a984C02AF
-salt=0x7189cdef69a0eecab5a005aaddd737ea3216e0ddba5df308ff5389ac696364c3
+addr=
+salt=
 bytecode=$(jq -r ".contracts[\"src/XRINGLockBox.sol\"].XRINGLockBox.evm.bytecode.object" out/dapp.sol.json)
 args=$(set -x; ethabi encode params \
   -v address "${ring:2}" \
