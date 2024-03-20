@@ -29,11 +29,11 @@ contract XRINGLockBoxTest is Test {
         mint_ring_to(him, 1);
 
         xRING.mint(address(lockbox), ring.totalSupply());
-		address[] memory allowList = new address[](1);
-		allowList[0] = address(lockbox);
-		address authority = address(new RINGAuthority(allowList));
+        address[] memory allowList = new address[](1);
+        allowList[0] = address(lockbox);
+        address authority = address(new RINGAuthority(allowList));
         vm.prank(ring.owner());
-		ring.setAuthority(authority);
+        ring.setAuthority(authority);
     }
 
     function test_contructor_args() public {
@@ -42,9 +42,9 @@ contract XRINGLockBoxTest is Test {
         assertEq(xRING.decimals(), 18);
     }
 
-	function invariant_totalSupply() public {
+    function invariant_totalSupply() public {
         assertEq(xRING.balanceOf(address(lockbox)), ring.totalSupply());
-	}
+    }
 
     function test_deposit() public {
         assertEq(ring.balanceOf(guy), 0);
@@ -113,12 +113,12 @@ contract XRINGLockBoxTest is Test {
         xRING.mint(account, amount);
     }
 
-	function deposit(address account, uint256 amount) internal {
+    function deposit(address account, uint256 amount) internal {
         vm.startPrank(account);
         xRING.approve(address(lockbox), amount);
         lockbox.deposit(amount);
         vm.stopPrank();
-	}
+    }
 
     function deposit_for(address from, address to, uint256 amount) internal {
         vm.startPrank(from);
@@ -136,9 +136,9 @@ contract XRINGLockBoxTest is Test {
 
     function withdraw_to(address from, address to, uint256 amount) internal {
         vm.startPrank(from);
-		ring.approve(address(lockbox), amount);
+        ring.approve(address(lockbox), amount);
         lockbox.withdrawTo(to, amount);
-		vm.stopPrank();
+        vm.stopPrank();
     }
 }
 
@@ -159,15 +159,20 @@ contract RINGAuthority {
         returns (bool)
     {
         return (
-            allowList[_src] && _sig == bytes4(keccak256("mint(address,uint256)"))
-        ) || (
-			allowList[_src] && _sig == bytes4(keccak256("burn(address,uint256)"))
-		);
+            allowList[_src]
+                && _sig == bytes4(keccak256("mint(address,uint256)"))
+        )
+            || (
+                allowList[_src]
+                    && _sig == bytes4(keccak256("burn(address,uint256)"))
+            );
     }
 }
 
 interface RING {
-    function approve(address _spender, uint256 _amount) external returns (bool success);
+    function approve(address _spender, uint256 _amount)
+        external
+        returns (bool success);
     function balanceOf(address src) external view returns (uint256);
     function owner() external view returns (address);
     function mint(address _guy, uint256 _wad) external;
