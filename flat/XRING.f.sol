@@ -695,10 +695,7 @@ abstract contract ERC20Burnable is Context, ERC20 {
 /* import "@openzeppelin/contracts/access/Ownable2Step.sol"; */
 
 contract XRING is ERC20, ERC20Burnable, Ownable2Step {
-    constructor()
-        ERC20("Darwinia Network xRING", "xRING")
-        Ownable2Step()
-    {}
+    constructor() ERC20("Darwinia Network xRING", "xRING") Ownable2Step() {}
 
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
