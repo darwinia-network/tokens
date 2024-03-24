@@ -1,4 +1,4 @@
-// hevm: flattened sources of src/xRINGLockBox.sol
+// hevm: flattened sources of src/XRINGLockBox.sol
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
@@ -90,7 +90,7 @@ interface IRING {
     function mint(address _guy, uint256 _wad) external;
 }
 
-////// src/xRINGLockBox.sol
+////// src/XRINGLockBox.sol
 /* pragma solidity ^0.8.0; */
 
 /* import "@openzeppelin/contracts/token/ERC20/IERC20.sol"; */
