@@ -28,6 +28,6 @@
 # DAO
 
 ## Canonical Cross-chain Deployment Addresses
-|  Contract       |  Canonical Cross-chain Deployment Address  |
-|-----------------|--------------------------------------------|
-| DarwiniRecovery | 0x000000000879926D12aF396788C0785B7e581e53 |
+|   Contract       |  Canonical Cross-chain Deployment Address  |
+|------------------|--------------------------------------------|
+| DarwiniaRecovery | 0x000000000879926D12aF396788C0785B7e581e53 |
