@@ -5,7 +5,7 @@ set -eo pipefail
 c3=0x0000000000C76fe1798a428F60b27c6724e03408
 
 ring=0x9469D013805bFfB7D3DEBe5E7839237e535ec483
-xring=
+xring=0x4941f719fb5775edbebdcfb632b10b9f87fc16eb
 
 deploy() {
   local addr=${1:?}
@@ -21,8 +21,8 @@ deploy() {
   fi
 }
 
-addr=
-salt=
+addr=0x0000000001Bda3C76095859d7C711B083F621C12
+salt=0x5652a031f6e72e750ac230040e03104a00098859a4a26642de03131ae191f6b6
 bytecode=$(jq -r ".contracts[\"src/XRINGLockBox.sol\"].XRINGLockBox.evm.bytecode.object" out/dapp.sol.json)
 args=$(set -x; ethabi encode params \
   -v address "${ring:2}" \
