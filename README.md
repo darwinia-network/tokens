@@ -24,3 +24,10 @@
 |  Contract  |         Crab Deployment Address            |
 |------------|--------------------------------------------|
 |   WCrab    | 0x2d2b97ea380b0185e9fdf8271d1afb5d2bf18329 |
+
+# DAO
+
+## Canonical Cross-chain Deployment Addresses
+|  Contract       |  Canonical Cross-chain Deployment Address  |
+|-----------------|--------------------------------------------|
+| DarwiniRecovery | 0x000000000879926D12aF396788C0785B7e581e53 |
