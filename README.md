@@ -5,8 +5,15 @@
 |--------------|--------------------------------------------|
 |   RING       | 0x9469D013805bFfB7D3DEBe5E7839237e535ec483 |
 |   KTON       | 0x9F284E1337A815fe77D2Ff4aE46544645B20c5ff |
-|  xRING       | 0x4941f719FB5775EdbEbDCFb632B10b9f87fc16eB |
-| XRINGLockBox | 0x0000000001Bda3C76095859d7C711B083F621C12 |
+|  xRING       |  |
+| XRINGLockBox |  |
+
+## Deployments on Sepolia
+|  Contract    |         Ethereum Deployment Address        |
+|--------------|--------------------------------------------|
+|   RING       | 0xdE64c6d8b24eeB16D864841d2873aB7a379c45b6 |
+|  xRING       | 0xa0f04a1782bd051171348c6ec59815845fda888a |
+| XRINGLockBox | 0x00000000062D35A6F9F82305c47A786527896578 |
 
 
 ## Deployments on Tron

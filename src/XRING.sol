@@ -8,7 +8,15 @@ import "@openzeppelin/contracts/access/Ownable2Step.sol";
 contract XRING is ERC20, ERC20Burnable, Ownable2Step {
     constructor() ERC20("Darwinia Network xRING", "xRING") Ownable2Step() {}
 
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
+    function mint(uint256 amount) external {
+        mint(_msgSender(), amount);
+    }
+
+    function mint(address account, uint256 amount) public onlyOwner {
+        _mint(account, amount);
+    }
+
+    function burn(address account, uint256 amount) external {
+        _burn(account, amount);
     }
 }
