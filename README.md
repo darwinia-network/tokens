@@ -12,8 +12,8 @@
 |  Contract    |         Ethereum Deployment Address        |
 |--------------|--------------------------------------------|
 |   RING       | 0xdE64c6d8b24eeB16D864841d2873aB7a379c45b6 |
-|  xRING       | 0xa0f04a1782bd051171348c6ec59815845fda888a |
-| XRINGLockBox | 0x00000000062D35A6F9F82305c47A786527896578 |
+|  xRING       | 0x3beb2cf5c2c050bc575350671aa5f06e589386e8 |
+| XRINGLockBox | 0x00002C6B069D1dA278730aFD3C9DC4CEDcfe7Ebc |
 
 
 ## Deployments on Tron
