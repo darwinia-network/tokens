@@ -11,9 +11,9 @@
 ## Deployments on Sepolia
 |  Contract    |         Ethereum Deployment Address        |
 |--------------|--------------------------------------------|
-|   RING       |  |
-|  xRING       |  |
-| XRINGLockBox |  |
+|   RING       | 0xdE64c6d8b24eeB16D864841d2873aB7a379c45b6 |
+|  xRING       | 0xa0f04a1782bd051171348c6ec59815845fda888a |
+| XRINGLockBox | 0x00000000062D35A6F9F82305c47A786527896578 |
 
 
 ## Deployments on Tron
