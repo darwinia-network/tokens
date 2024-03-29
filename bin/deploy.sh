@@ -5,7 +5,7 @@ set -eo pipefail
 c3=0x0000000000C76fe1798a428F60b27c6724e03408
 
 ring=0x9469D013805bFfB7D3DEBe5E7839237e535ec483
-xring=
+xring=0x81e32d4652Be82AE225DEdd1bD0bf3BCba8FEE07
 
 deploy() {
   local addr=${1:?}

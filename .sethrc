@@ -1,4 +1,4 @@
-export SETH_CHAIN=sepolia
+export SETH_CHAIN=ethereum
 
 # darwinia deployer
 export ETH_FROM=0x0f14341A7f464320319025540E8Fe48Ad0fe5aec
