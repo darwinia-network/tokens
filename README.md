@@ -17,10 +17,12 @@
 
 
 ## Deployments on Tron
-|  Contract  |           TRON Deployment Address          |
-|------------|--------------------------------------------|
-|   RING     | TL175uyihLqQD656aFx3uhHYe1tyGkmXaW         |
-|   KTON     | TW3kTpVtYYQ5Ka1awZvLb9Yy6ZTDEC93dC         |
+|  Contract    |           TRON Deployment Address          |
+|--------------|--------------------------------------------|
+|   RING       | TL175uyihLqQD656aFx3uhHYe1tyGkmXaW         |
+|  xRING       | TNnUtHb7fywQ9e6kAY7MvRMMcyUWFy2vru         |
+| XRINGLockBox | TWYCpj6nnb6JG7gXWU2t3FhnSwLpnXxvcE         |
+|   KTON       | TW3kTpVtYYQ5Ka1awZvLb9Yy6ZTDEC93dC         |
 
 ## Deployments on Darwinia
 |  Contract  |       Darwinia Deployment Address          |
