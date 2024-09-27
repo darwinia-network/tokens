@@ -15,6 +15,16 @@
 |  xRING       | 0x3beb2cf5c2c050bc575350671aa5f06e589386e8 |
 | XRINGLockBox | 0x00002C6B069D1dA278730aFD3C9DC4CEDcfe7Ebc |
 
+## Deployments on Near Testnet
+|  Contract  |         Near Testnet Deployment Address    |
+|------------|--------------------------------------------|
+|  xRING     | 3beb2cf5c2c050bc575350671aa5f06e589386e8.factory.sepolia.testnet |
+
+## Deployments on Aurora Testnet
+|  Contract  |         Aurora Testnet Deployment Address    |
+|------------|--------------------------------------------|
+|  xRING     | 0x6Eb9Fde400E08ead608941253d0738b907c24E0A |
+
 
 ## Deployments on Tron
 |  Contract    |           TRON Deployment Address          |
